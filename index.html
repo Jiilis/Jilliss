@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Jogo da Memória Hot Wheels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2d3748; /* gray-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ffcc00; /* yellow-400 equivalent */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ffdf40; /* yellow-300 equivalent */
+      }
+      body {
+        background-color: #000000;
+      }
+
+      /* Animation for matched cards */
+      @keyframes custom-brilhar-desaparecer {
+          0%   { filter: brightness(1); opacity: 1; transform: scale(1); }
+          50%  { filter: brightness(1.75); opacity: 1; transform: scale(1.1); }
+          100% { filter: brightness(1); opacity: 0; transform: scale(0.75); }
+      }
+      .animate-brilhar-desaparecer {
+          animation: custom-brilhar-desaparecer 1s ease-in-out forwards;
+      }
+
+      /* Animation for card press */
+      @keyframes cardPress {
+        0% { transform: scale(1); }
+        50% { transform: scale(0.93); }
+        100% { transform: scale(1); }
+      }
+      .animate-card-press {
+        animation: cardPress 0.15s ease-in-out;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-BaP8o0TH.js"></script>
+</head>
+<body class="bg-black text-white">
+    <div id="root"></div>
+</body>
+</html>
